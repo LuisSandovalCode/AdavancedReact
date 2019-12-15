@@ -1,3 +1,2 @@
-# curso-platzi-react-avanzado ⚛️
+#PETGRAM Pet Social Media
 
-Repositorio con el código del [Curso Avanzado de React de Platzi](https://platzi.com/cursos/react-avanzado/)
