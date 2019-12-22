@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{63:function(e,t,n){"use strict";n.r(t);var a=n(0),r=n.n(a),o=n(15),c=n(31),i=n(14);t.default=function(){var e=Object(a.useContext)(o.a).RemoveAuth;return r.a.createElement(i.a,{title:"Usuario"},r.a.createElement(c.a,{onClick:e},"Cerrar Sesión"))}}}]);
