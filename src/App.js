@@ -4,7 +4,8 @@ import { GlobalStyle } from "./GlobalStyles";
 import { ListOfPhotoCards } from "./containers/ListOfPhotoCards";
 import { Logo } from "./components/Logo";
 import { PhotoCardWithQuery } from './containers/PhotoCardWithQuery'
-import { from } from "apollo-boost";
+import { Home } from './pages/Home'
+import { Router } from '@reach/router'
 export const App = () => {
   const urlParams = new window.URLSearchParams(window.location.search);
   const detailId = urlParams.get('detail');
@@ -18,10 +19,10 @@ export const App = () => {
       ?
       <PhotoCardWithQuery id={detailId}/>
       :
-      <React.Fragment>
-        <ListOfCategories />
-        <ListOfPhotoCards categoryId={2} />
-      </React.Fragment>
+      <Router>
+         <Home path="/"/>
+         <Home path="/pet/:categoryid"/>
+      </Router>
     }
 </React.Fragment>
   )
