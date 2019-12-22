@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ImagenWrapper, Image,Article } from "./Style";
-import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
+import { Link } from '@reach/router'
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { useNearScreen } from "../hooks/useNearScreen";
 import { FavButton } from '../FavButton';
@@ -16,11 +16,11 @@ export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
     <Article ref={element}>
       {show && (
         <React.Fragment>
-          <a href={`/?detail=${id}`}>
+          <Link to={`/detail/${id}`}>
             <ImagenWrapper>
               <Image src={src} />
             </ImagenWrapper>
-          </a>
+          </Link>
           <ToggleLikeMutation>
           {
               (toggleLike) => {
