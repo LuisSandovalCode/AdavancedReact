@@ -12,6 +12,10 @@ const Provider = ({ children }) => {
         ActiveteAuth : token =>{
             setIsAuth(true);
             window.sessionStorage.setItem("token",token);
+        },
+        RemoveAuth: () =>{
+            setIsAuth(false);
+            window.sessionStorage.removeItem("token");
         }
     }
 
