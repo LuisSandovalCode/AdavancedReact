@@ -8,10 +8,7 @@ import { Favs } from './pages/Favs'
 import { User } from './pages/User'
 import { NotRegisterUser } from './pages/NotRegisterUser'
 import { Router } from '@reach/router'
-
-const UserLogged = ({ children })=>{
-  return children({ isAuth: false });
-}
+import Context from './Context';
 export const App = () => {
   const urlParams = new window.URLSearchParams(window.location.search);
   const detailId = urlParams.get('detail');
@@ -24,7 +21,7 @@ export const App = () => {
           <Home path="/pet/:categoryid"/>
           <Detail path="/detail/:detailId" />
       </Router>
-      <UserLogged>
+      <Context.Consumer>
             {
               ({ isAuth }) => (
                 isAuth 
@@ -40,8 +37,7 @@ export const App = () => {
                 </Router>
               )
             }
-      </UserLogged>
-
+      </Context.Consumer>
       <NavBar />
     </React.Fragment>
   )
