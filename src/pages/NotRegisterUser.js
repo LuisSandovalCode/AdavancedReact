@@ -3,13 +3,14 @@ import {Context} from '../Context';
 import { UserForm } from '../components/UserForm';
 import { RegisterMutation } from '../containers/RegisterMutation';
 import { LoginMutation } from '../containers/LoginMutation';
+import { Layout } from '../components/Layout';
 
 
 
 export const NotRegisterUser = ()=>{
     const { ActiveteAuth } = useContext(Context);
     return (
-              <React.Fragment>
+              <Layout title="Registro Usuario e Inicio de Sesión" subtitle="Registro de nuevos usuarios e inicio de sisión para los nuevos">
                     <RegisterMutation>
                         {
                             (register,{ data,error,loading }) => {
@@ -45,6 +46,6 @@ export const NotRegisterUser = ()=>{
                             }
                         }
                     </LoginMutation>
-                </React.Fragment>
+                </Layout>
     )
 }

@@ -1,10 +1,8 @@
 import React from 'react';
 import { FavsWithQuery } from '../containers/GetFavorites';
-
-
-export const Favs = ()=>(
-    <React.Fragment>
-        <h1>Favoritos</h1>
+import { Layout } from '../components/Layout';
+export default ()=>(
+    <Layout title="Tus Favoritos" subtitle="Aquí puedes encontrar tus favoritos">
         <FavsWithQuery/>
-    </React.Fragment>
+    </Layout>
 )

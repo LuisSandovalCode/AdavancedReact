@@ -5,7 +5,7 @@ import { ApolloProvider } from "react-apollo";
 import { App } from "./App";
 import Context from './Context';
 const client = new ApolloClient({
-  uri: "https://petgram-server.midudev.now.sh/graphql",
+  uri: "https://petserver-luis-i1b7nx12f.now.sh/graphql",
   request : operation =>{
     const token = window.sessionStorage.getItem("token");
     const authorization =  token ? `Bearer ${token}` : "";

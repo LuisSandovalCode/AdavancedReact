@@ -1,6 +1,7 @@
 import React from 'react'
 import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
 import { Button} from "./Styles";
+import PropTypes from 'prop-types';
 export const FavButton = ({liked, likes, onClick}) => {
     
     const Icon = liked ? MdFavorite : MdFavoriteBorder;
@@ -13,4 +14,5 @@ export const FavButton = ({liked, likes, onClick}) => {
         </React.Fragment>
     );
 }
+
 

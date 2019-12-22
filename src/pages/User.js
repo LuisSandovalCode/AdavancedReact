@@ -1,11 +1,11 @@
 import React,{useContext} from 'react'
 import { Context } from '../Context';
 import { SubmitButton } from '../components/SubmitButton';
-export const User = ()=> {
+import { Layout } from '../components/Layout';
+export default ()=> {
     const { RemoveAuth } = useContext(Context);
 
-    return <React.Fragment>
-        <h1>Usuario</h1>
+    return <Layout title="Usuario">
         <SubmitButton onClick={RemoveAuth} >Cerrar Sesión</SubmitButton>
-    </React.Fragment>
+    </Layout>
 }
